@@ -13,20 +13,20 @@ st.title('PDF extraction for RAG')
 pdf_extraction_option = st.selectbox(
     "Which PDF extraction method would you like to use?",
     ("PyMuPDF", "llmsherpa"),
-    index=1,
+    index=0,
     placeholder="Select PDF extraction method...",
 )
 
 st.write('PDF Extraction Method:', pdf_extraction_option)
 
-text_chunking_option = st.selectbox(
-    "Which text chunking method would you like to use?",
-    ("Fixed size", "semantic chunking", "HYDE"),
-    index=0,
-    placeholder="Select text chunking method...",
-)
-
-st.write('Text Chunking Method:', text_chunking_option)
+# text_chunking_option = st.selectbox(
+#     "Which text chunking method would you like to use?",
+#     ("Fixed size", "semantic chunking (TBD)", "HYDE (TBD)"),
+#     index=0,
+#     placeholder="Select text chunking method...",
+# )
+#
+# st.write('Text Chunking Method:', text_chunking_option)
 
 
 ############################# Extraction Methods #############################
