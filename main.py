@@ -76,7 +76,8 @@ def extract_data_llmsherpa(file_path) -> PDFExtractedData:
     pdf_page.sections = doc.sections()
     for tbl in doc.tables():
         pd_table = pd.read_html(tbl.to_html())
-        pdf_page.tables.append(pd_table[0])
+        if len(pd_table) > 0:
+            pdf_page.tables.append(pd_table[0])
     pdf_data.pages.append(pdf_page)
     return pdf_data
 
