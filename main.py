@@ -96,12 +96,12 @@ FIXED_SIZE_CHUNKING_OPTS = {
     "chunk_overlap": 20
 }
 
-if text_chunking_option == "llamaindex":
-    LLAMA_INDEX_CHUNKING_OPTS["chunk_size"] = st.slider('chunk size', 100, 500, 256)
-    LLAMA_INDEX_CHUNKING_OPTS["chunk_overlap"] = st.slider('chunk overlap', 0, 200, 20)
-elif text_chunking_option == "Fixed size":
-    FIXED_SIZE_CHUNKING_OPTS["chunk_size"] = st.slider('chunk size', 100, 500, 256)
-    FIXED_SIZE_CHUNKING_OPTS["chunk_overlap"] = st.slider('chunk overlap', 0, 200, 20)
+# if text_chunking_option == "llamaindex":
+#     LLAMA_INDEX_CHUNKING_OPTS["chunk_size"] = st.slider('chunk size', 100, 500, 256)
+#     LLAMA_INDEX_CHUNKING_OPTS["chunk_overlap"] = st.slider('chunk overlap', 0, 200, 20)
+# elif text_chunking_option == "Fixed size":
+#     FIXED_SIZE_CHUNKING_OPTS["chunk_size"] = st.slider('chunk size', 100, 500, 256)
+#     FIXED_SIZE_CHUNKING_OPTS["chunk_overlap"] = st.slider('chunk overlap', 0, 200, 20)
 
 
 def extract_chunks_fixed_size(text):
@@ -116,11 +116,11 @@ def extract_chunks_fixed_size(text):
     return docs
 
 
-def extract_chunks(text):
-    if text_chunking_option == "Fixed size":
-        return extract_chunks_fixed_size(text)
-    else:
-        return extract_chunks_fixed_size(text)
+# def extract_chunks(text):
+#     if text_chunking_option == "Fixed size":
+#         return extract_chunks_fixed_size(text)
+#     else:
+#         return extract_chunks_fixed_size(text)
 
 
 #############################################################################
